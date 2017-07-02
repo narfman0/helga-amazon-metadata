@@ -1,10 +1,6 @@
-from pip.req import parse_requirements
 from setuptools import setup, find_packages
 from helga_amazon_meta import __version__ as version
 
-requirements = [
-    str(req.req) for req in parse_requirements('requirements.txt')
-]
 
 setup(
     name='helga-amazon-meta',
@@ -27,9 +23,12 @@ setup(
     include_package_data=True,
     py_modules=['helga_amazon_meta.plugin'],
     zip_safe=True,
-    install_requires=requirements,
+    install_requires=[
+        'helga',
+        'python-amazon-simple-product-api',
+    ],
     test_suite='',
-    entry_points = dict(
+    entry_points=dict(
         helga_plugins=[
             'amazon-meta = helga_amazon_meta.plugin:amazon_meta',
         ],
