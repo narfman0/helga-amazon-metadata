@@ -17,8 +17,7 @@ This plugin matches related chat and relates more information to users
 TODO
 ----
 
-* Parse, follow, and grab shared links like http://a.co/c5aX6WD
-* Add pluggable parsers - because not all of us want a amazon key all day
+* Add pluggable parsers - because not all of us want an amazon key all day
 
 License
 -------

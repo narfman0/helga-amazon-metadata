@@ -26,11 +26,13 @@ setup(
     install_requires=[
         'helga',
         'python-amazon-simple-product-api',
+        'requests',
     ],
     test_suite='',
     entry_points=dict(
         helga_plugins=[
             'amazon-meta = helga_amazon_meta.plugin:amazon_meta',
+            'amazon-meta-short = helga_amazon_meta.plugin:amazon_meta_short',
         ],
     ),
 )
