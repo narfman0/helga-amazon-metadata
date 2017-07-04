@@ -12,7 +12,7 @@ from helga_amazon_meta.plugin import parse_response, PRODUCT_REGEX, SHORT_REGEX
 
 def mocked_requests_get(*args, **kwargs):
     class MockResponse:
-        def __init__(self, title, price):
+        def __init__(self, *args, **kwargs):
             self.text = """
             <html>
               <head>
@@ -23,7 +23,7 @@ def mocked_requests_get(*args, **kwargs):
                 <div id="priceblock_ourprice">${price}</div>
               </body>
             </html>
-            """.format(title=title, price=price)
+            """.format(**kwargs)
 
     return MockResponse(title='Raspberry PI 3', price=35)
 
