@@ -24,6 +24,7 @@ setup(
     py_modules=['helga_amazon_meta.plugin'],
     zip_safe=True,
     install_requires=[
+        'beautifulsoup4',
         'helga',
         'python-amazon-simple-product-api',
         'requests',

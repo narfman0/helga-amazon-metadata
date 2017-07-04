@@ -14,11 +14,6 @@ Usage
 
 This plugin matches related chat and relates more information to users
 
-TODO
-----
-
-* Add pluggable parsers - because not all of us want an amazon key all day
-
 License
 -------
 
